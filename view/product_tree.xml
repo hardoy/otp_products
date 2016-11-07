@@ -3,8 +3,7 @@
 this repository contains the full copyright notices and license terms. -->
 <tree string="Product">
     <field name="name"/>
-    <field name="description" rowspan="2" colspan="3"/>
+    <field name="description"/>
     <field name="price"/>
-    <field name="price_level"/>
- 
+    <field name="price_level"/> 
 </tree>
