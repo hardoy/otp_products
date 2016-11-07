@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<tryton>
+<data>
+        <menuitem name="otp_products" sequence="0" id="menu_otp_products"/>
+ 
+        <record model="ir.action.act_window" id="act_otp_products_window">
+            <field name="name">product</field>
+            <field name="res_model">otp_products.product</field>
+        </record>
+       
+        <menuitem name="product" parent="menu_otp_products" id="menu_products" action="act_otp_products_window"/>
+       
+        <record model="ir.ui.view" id="otp_products_view_tree">
+            <field name="model">otp_products.product</field>
+            <field name="type">tree</field>
+            <field name="name">product_tree</field>
+        </record>
+       
+        <record model="ir.ui.view" id="otp_products_view_form">
+            <field name="model">otp_products.product</field>
+            <field name="type">form</field>
+            <field name="name">product_form</field>
+        </record>
+       
+        <record model="ir.action.act_window.view" id="act_otp_products_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="otp_products_view_tree"/>
+            <field name="act_window" ref="act_otp_products_window"/>
+        </record>
+       
+        <record model="ir.action.act_window.view" id="act_otp_products_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="otp_products_view_form"/>
+            <field name="act_window" ref="act_otp_products_window"/>
+        </record>
+       
+ </data>
+</tryton>
